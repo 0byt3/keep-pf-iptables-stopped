@@ -1,0 +1,9 @@
+[Unit]
+Description=Stop packetfence-iptables
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl disable --now packetfence-iptables.service
+
+[Install]
+WantedBy=multi-user.target

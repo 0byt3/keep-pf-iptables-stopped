@@ -1,0 +1,8 @@
+[Unit]
+Description=Ensure packetfence-iptables is stopped
+
+[Timer]
+OnCalendar=*:0/5:00
+
+[Install]
+WantedBy=timer.target

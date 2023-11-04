@@ -1,0 +1,11 @@
+[Unit]
+Description=Enable Stop packetfence-iptables timer
+After=packetfence-haproxy-admin.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl enable --now stop-pf-iptables.timer
+ExecStart=/usr/bin/systemctl start stop-pf-iptables.timer
+
+[Install]
+WantedBy=multi-user.target
